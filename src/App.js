@@ -5,10 +5,11 @@ export function replaceCamleWithSpace(colorName) {
 }
 
 function App() {
-  const [buttonColor, setButtonColor] = useState("red");
+  const [buttonColor, setButtonColor] = useState("MediumVioletRed");
   const [disable, setDisable] = useState(false);
 
-  const newButtonColor = buttonColor === "red" ? "blue" : "red";
+  const newButtonColor =
+    buttonColor === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed";
 
   return (
     <div>
@@ -17,7 +18,7 @@ function App() {
         style={{ backgroundColor: disable ? "gray" : buttonColor }}
         disabled={disable}
       >
-        change to {newButtonColor}
+        change to {replaceCamleWithSpace(newButtonColor)}
       </button>
       <input
         type="checkbox"
